@@ -4,9 +4,11 @@ import WelcomeText from "./components/WelcomeText/WelcomeText";
 import SearchForm from "./components/SearchForm/SearchForm";
 import MovieList from "./components/MovieList/MovieList";
 import { StyledWrapper } from "./style/StyledWrapper";
+import { FirstView } from "./style/FirstView";
 
 function App() {
   const [query, setQuery] = useState("");
+  const [isTop, setIsTop] = useState(false);
 
   const handleSearchSubmit = (value) => {
     if (value) {
@@ -18,12 +20,16 @@ function App() {
     }
   };
 
+  console.log(isTop);
+
   return (
     <StyledWrapper>
       <GlobalStyle />
-      <WelcomeText />
-      <SearchForm handleSearchSubmit={handleSearchSubmit} />
-      <MovieList query={query}/>
+      <FirstView isTop={isTop}>
+        <WelcomeText />
+        <SearchForm handleSearchSubmit={handleSearchSubmit} />
+        <MovieList query={query} isTop={isTop} setIsTop={setIsTop}/>
+      </FirstView>
     </StyledWrapper>
   );
 }
