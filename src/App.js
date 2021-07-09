@@ -20,15 +20,13 @@ function App() {
     }
   };
 
-  console.log(isTop);
-
   return (
     <StyledWrapper>
       <GlobalStyle />
       <FirstView isTop={isTop}>
         <WelcomeText />
         <SearchForm handleSearchSubmit={handleSearchSubmit} />
-        <MovieList query={query} isTop={isTop} setIsTop={setIsTop}/>
+        <MovieList query={query} setIsTop={setIsTop} />
       </FirstView>
     </StyledWrapper>
   );
