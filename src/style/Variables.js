@@ -1,5 +1,6 @@
 export const colors = {
-  mainBacground: "#050117",
+  mainBacground: "#171717",
+  mainColor: '#17698a',
   textColor: "white",
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GlobalStyle from "./style/GlobalStyle";
+import WelcomeText from "./components/WelcomeText/WelcomeText";
 import SearchForm from "./components/SearchForm/SearchForm";
 import MovieList from "./components/MovieList/MovieList";
 import { StyledWrapper } from "./style/StyledWrapper";
@@ -20,6 +21,7 @@ function App() {
   return (
     <StyledWrapper>
       <GlobalStyle />
+      <WelcomeText />
       <SearchForm handleSearchSubmit={handleSearchSubmit} />
       <MovieList query={query}/>
     </StyledWrapper>
